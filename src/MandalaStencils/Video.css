@@ -46,6 +46,9 @@
     left: 70%;
     top: 14%; /* Slight adjustment to keep the image within bounds */
   }
+  body {
+    background-size: cover; /* Ensure the background fits on smaller screens */
+  }
   .video-grid {
     gap: 1px; /* Reduce gap between videos */
   }
@@ -64,6 +67,9 @@
   }
   .video-container {
       margin-bottom: -91px;
+  }
+  body {
+    background-size: cover; /* Ensure the background fits on smaller screens */
   }
   .video-grid {
     overflow-x: hidden;
@@ -88,6 +94,9 @@
   .video-grid {
     overflow-x: hidden;
     gap: 1px;
+  }
+  body {
+    background-size: cover; /* Ensure the background fits on smaller screens */
   }
   .full-width-video {
     width: 70%; 
