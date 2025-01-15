@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome Origami Odyssey</h1>
+        <h1>Welcome to Origami Odyssey</h1>
         <p>Explore and learn more about Origami</p>
       </header>
 
