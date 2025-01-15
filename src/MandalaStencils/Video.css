@@ -40,60 +40,57 @@
   }
 /* Optional responsive tweaks for smaller screens */
 @media (max-width: 768px) {
-    .corner-image {
-      width:10px;
-      height: 10px; /* Smaller image size on mobile */
-      left: 70%;
-      top: 14%; /* Slight adjustment to keep the image within bounds */
-    }
-    .video-grid {
-       /* Prevent horizontal scrolling on smaller screens */
-      gap: 1px; /* Reduce gap between videos */
-    }
-    .full-width-video {
-      width: 70%; /* Ensure the video fits inside the screen */
-      height: 70%; /* Maintain aspect ratio */
-    }
+  .corner-image {
+    width: 15%;  /* Reduced the image size */
+    height: 15%; /* Reduced the image size */
+    left: 70%;
+    top: 14%; /* Slight adjustment to keep the image within bounds */
   }
-  
-  @media (max-width: 480px) {
-    .corner-image {
-      width: 10px;
-      height: 10px; /* Further reduce the image size */
-      left: 50%;
-      top: 19%; /* Ensure image stays within bounds */
-    }
-    .video-container {
-        margin-bottom: -91px; /* Further reduce margin between video containers */
-      }
-    .video-grid {
-      overflow-x: hidden; /* Prevent horizontal scrolling on very small screens */
-      gap: 1px; /* Further reduce gap between videos */
-    }
-  
-    .full-width-video {
-      width: 70%; /* Ensure the video fits inside the screen */
-      height: 70%; /* Maintain aspect ratio */
-    }
+  .video-grid {
+    gap: 1px; /* Reduce gap between videos */
   }
-  @media (max-width: 1024px) {
-    .corner-image {
-      width: 290px;
-      height: 290px; /* Further reduce the image size */
-      left: 67%;
-      top: 35%; /* Ensure image stays within bounds */
-    }
-    .video-container {
-        margin-bottom: -91px; /* Further reduce margin between video containers */
-      }
-    .video-grid {
-      overflow-x: hidden; /* Prevent horizontal scrolling on very small screens */
-      gap: 1px; /* Further reduce gap between videos */
-    }
-  
-    .full-width-video {
-      width: 70%; /* Ensure the video fits inside the screen */
-      height: 70%; /* Maintain aspect ratio */
-    }
+  .full-width-video {
+    width: 70%; 
+    height: 70%;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .corner-image {
+    width: 5%; /* Reduced the image size */
+    height: 5%; /* Reduced the image size */
+    left: 30%;
+    top: 19%; /* Ensure image stays within bounds */
+  }
+  .video-container {
+      margin-bottom: -91px;
+  }
+  .video-grid {
+    overflow-x: hidden;
+    gap: 1px;
+  }
+  .full-width-video {
+    width: 70%; 
+    height: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .corner-image {
+    width: 150px; /* Reduced the image size */
+    height: 150px; /* Reduced the image size */
+    left: 67%;
+    top: 35%;
+  }
+  .video-container {
+      margin-bottom: -91px;
+  }
+  .video-grid {
+    overflow-x: hidden;
+    gap: 1px;
+  }
+  .full-width-video {
+    width: 70%; 
+    height: 70%;
+  }
+}
