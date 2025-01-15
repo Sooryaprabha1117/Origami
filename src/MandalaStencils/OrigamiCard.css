@@ -1,0 +1,76 @@
+.origami-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: url('../assets/origami.png') no-repeat center/cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 10px;
+  }
+  
+  .origami-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .origami-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  
+  .origami-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .origami-card:hover .origami-content {
+    opacity: 1;
+  }
+  
+  .origami-card:hover .origami-image {
+    opacity: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .origami-card {
+      width: 200px;
+      height: 300px;
+    }
+    .origami-content h3 {
+      font-size: 1.2rem;
+    }
+    .origami-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .origami-card {
+      width: 150px;
+      height: 250px;
+    }
+    .origami-content h3 {
+      font-size: 1rem;
+    }
+    .origami-content p {
+      font-size: 0.8rem;
+    }
+  }
+  

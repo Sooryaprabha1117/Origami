@@ -1,0 +1,195 @@
+
+/* Images.css */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  padding: 20px;
+}
+h1{
+  color: #70022c;
+}
+.origami-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.origami-card {
+  position: relative;
+  width: 120%;
+  max-width: 250px;
+  height: 250px;
+ 
+  border-radius: 8px;
+  margin: auto;
+}
+
+.origami-image {
+  width: 100%;
+  height: 100%;
+   
+  object-fit: cover; /* Ensure the image covers the entire card */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.origami-card:hover .origami-image {
+  transform: scale(1.2); /* Scale the image to 120%, zooming out of the box */
+ 
+}
+
+
+
+.origami-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(156, 121, 121, 0.336);
+  color: rgb(94, 5, 57);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.explore-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ad0d4a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Existing styles remain unchanged */
+
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px; /* Adjusted to give a better view */
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensure content is vertically centered */
+  align-items: center; /* Align elements horizontally */
+  overflow: hidden;
+}
+
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Make the buttons overlay on the image */
+}
+
+.slider-image {
+  width: 60%;
+  height: 80%;
+ 
+  object-fit: contain; /* Fit the image properly inside the card */
+  transform: rotate(-90deg); /* Rotate the image */
+ 
+  border-radius: 8px;
+}
+
+.nav-button {
+  background-color: #f394d7;
+  color: rgb(87, 3, 45);
+  border:#ad0d4a 2px solid;
+  padding: 5px 8px;
+  font-size: large;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-button.prev {
+  left: 0; /* Position the Prev button on the left */
+}
+
+.nav-button.next {
+  right: 0; /* Position the Next button on the right */
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .origami-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid layout */
+  }
+
+  .origami-card {
+    max-width: 70%;
+    height: 80%; /* Allow card height to adjust based on content */
+  }
+
+  .slider-image {
+    width: 63%; /* Adjust image size for smaller screens */
+    height: 70%;
+    transform: rotate(-90deg); /* Reset rotation on smaller screens */
+  }
+
+  .popup-card {
+    width: 90%; /* Adjust card width on smaller screens */
+    max-width: 540px; /* Limit maximum width */
+   
+    max-height: 520px; /* Limit maximum height */
+  }
+
+  .nav-button {
+    padding: 5px 10px;
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .origami-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid layout for mobile */
+  }
+
+  .origami-card {
+    max-width: 70%;
+    height: 60%; /* Adjust card height */
+  }
+
+  .slider-image {
+    width: 65%; /* Adjust image size further */
+    height: 60%;
+    transform: rotate(-90deg);
+  }
+
+  .popup-card {
+    width: 120%; /* Adjust card width */
+    max-width: 350px; /* Limit maximum width for very small screens */
+    max-height: 350px; /* Limit height */
+  }
+
+  .nav-button {
+    padding: 5px 8px;
+    font-size: medium; /* Adjust button size */
+  }
+}

@@ -1,0 +1,90 @@
+/* App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/origami1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0;
+ 
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align logo to the left and links to the right */
+  background-color: #f4868a57;
+  padding: 10px 20px;
+}
+
+.navbar img {
+  width: 20%; /* Fixed size for the logo */
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Spacing between navigation links */
+}
+
+.nav-link {
+  color: #3f024b;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease; /* Smooth transition effect */
+  position: relative; /* Required for hover underline effect */
+}
+
+.nav-link:hover {
+  color: #f4f5f7;
+  text-shadow: 0 0 5px #f4f5f7, 0 0 10px #3f024b; /* Enhanced glow effect */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3f024b;
+  bottom: -5px; /* Position the underline slightly below the text */
+  left: 0;
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+
+
+
+
+.origami-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #490223;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  color: #a1062dc7;
+}
+
+.origami-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
